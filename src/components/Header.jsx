@@ -1,3 +1,4 @@
+import {  Link } from "react-router-dom";
 
 
 
@@ -6,11 +7,18 @@ function Header(){
 
     return(
 
-        <section>
+        <header>
+            
             <h1> Care Connect</h1>
+            
+        
+            <nav>
+             <Link to="/"> Home </Link>
+            </nav>
+           
+           
 
-            <p></p>
-        </section>
+       </header>
 
     );
 }
