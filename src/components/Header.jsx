@@ -1,9 +1,15 @@
-import {  Link } from "react-router-dom";
 
+import Navbar from "./Navbar";
 
 
 
 function Header(){
+
+ const navLinks=[
+                  {name: "Home", path: "/"},
+                  {name: "About", path: "/about"},
+                  {name: "Login", path: "/login"}
+                ];
 
     return(
 
@@ -11,11 +17,7 @@ function Header(){
             
             <h1> Care Connect</h1>
             
-          <nav>
-             <Link to="/"> Home </Link> 
-              <br />
-             <Link to="/about"> About </Link>
-          </nav>
+            <Navbar links={navLinks}/>
            
         </header>
 
