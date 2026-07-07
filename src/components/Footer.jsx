@@ -7,7 +7,7 @@ function Footer(){
         
         <footer>
               <h4> Built by : Munnisha Vissamsetti.</h4>
-              <p> @2026, All rights reserved to care Connect Developer.</p>
+              <p> @2026, All rights reserved to Care Connect Developer.</p>
 
               <p> Contact Me: { " "}
               <a href ="munnisha_v@outlook.com"> Send Email</a> , 
