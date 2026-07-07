@@ -11,14 +11,13 @@ function Header(){
             
             <h1> Care Connect</h1>
             
-        
-            <nav>
-             <Link to="/"> Home </Link>
-            </nav>
+          <nav>
+             <Link to="/"> Home </Link> 
+              <br />
+             <Link to="/about"> About </Link>
+          </nav>
            
-           
-
-       </header>
+        </header>
 
     );
 }
