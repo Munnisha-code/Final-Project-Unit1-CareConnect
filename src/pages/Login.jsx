@@ -1,5 +1,6 @@
 
-import React, { useState, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import {  Link } from "react-router-dom";
 
 
 function Login(){
@@ -42,11 +43,12 @@ function Login(){
                     <input type="password" name="password" value={password} onChange={changeHandler} /><br />
 
                     <button type="submit" className ="login-button"> Login </button>
-                </form>
+                </form> 
+                <br />
 
                 <p> If you are not a member? {''}
                     <Link to='/RegisterForm '> Please register Here </Link>
-                </p>
+                </p> <br />
             </center>
         </div>
 
