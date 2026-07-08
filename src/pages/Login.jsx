@@ -1,5 +1,6 @@
 
-import React, { useState} from 'react';
+import React, { useState, Link } from 'react-router-dom';
+
 
 function Login(){
 
@@ -42,8 +43,9 @@ function Login(){
 
                     <button type="submit" className ="login-button"> Login </button>
                 </form>
+
                 <p> If you are not a member? {''}
-                    <link to='/RegisterForm '> Please register Here </link>
+                    <Link to='/RegisterForm '> Please register Here </Link>
                 </p>
             </center>
         </div>

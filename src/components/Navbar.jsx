@@ -7,7 +7,7 @@ function Navbar({links}){
 
         <nav className= "navbar">
             {links.map((link) => (
-             <Link key= {Link.name} to={link.path}>
+             <Link key= {link.name} to={link.path}>
                 {link.name}
              </Link> 
              ))}
