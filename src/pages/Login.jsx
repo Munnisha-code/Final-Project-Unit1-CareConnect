@@ -17,13 +17,13 @@ function Login(){
    // onchange eventhandler for enter/change the login credentials
 
    const changeHandler = ev =>{
-         setdata({...data, [ev.target.name]: ev.target.value})
+         setData({...data, [ev.target.name]: ev.target.value})
    }
    
    // submit handler
 
    const submitHandler = ev => {
-         evpreventDefault();
+         ev.preventDefault();
 
          console.log(data)
    }

@@ -15,30 +15,40 @@ function RegisterForm(){
 
     const {firstName, lastName, mobileNumber, email, password, confirmPassword} = data;
 
+    const changeHandler = ev => {
+         setData({...data, [ev.target.name]: ev.target.value})
+    }
+    
+    const submitHandler = ev => {
+         ev.preventDefault();
+
+         console.log(data)
+    }
 
 
     return(
         <div>
             <h3> Register Form</h3>
 
-            <form>
+            <form onSubmit = 'submitHandler'>
+
                 <label> First Name: </label>
-                <input type ='text' name = 'firstName' value = {firstName} /> <br />
+                <input type ='text' name = 'firstName' value = {firstName} onChange ={changeHandler} /> <br />
 
                 <label> Last Name: </label>
-                <input type ='text' name = 'lastName' value = {lastName} /> <br />
+                <input type ='text' name = 'lastName' value = {lastName}  onChange ={changeHandler} /> <br />
 
                 <label> Mobile Number: </label>
-                <input type ='tel' id ='mobileNumber' name = 'mobileNumber' value = {mobileNumber} /> <br />
+                <input type ='tel' id ='mobileNumber' name = 'mobileNumber' value = {mobileNumber} onChange ={changeHandler} /> <br />
 
                 <label> Email : </label>
-                <input type ='text' name = 'email' value = {email} /> <br />
+                <input type ='email' name = 'email' value = {email} onChange ={changeHandler} /> <br />
 
                 <label> Password: </label>
-                <input type ='text' name = 'password' value = {password} /> <br />
+                <input type ='password' name = 'password' value = {password} onChange ={changeHandler} /> <br />
 
                 <label> Confirm Password: </label>
-                <input type ='text' name = 'confirmPassword' value = {confirmPassword} /> <br />
+                <input type ='confirmPassword' name = 'confirmPassword' value = {confirmPassword} onChange ={changeHandler} /> <br />
 
                 <button type = 'submit'> Register </button>
 
