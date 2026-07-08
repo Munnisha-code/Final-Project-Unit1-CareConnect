@@ -31,7 +31,7 @@ function About(){
             </section>
 
             <section>
-                <h2>Why You have to Choose Care Coonect App</h2>
+                <h2>Why You have to Choose Care Connect App</h2>
                 <p>
                     CareConnect is designed to make personal safety simple, fast, and reliable. 
                     The app helps users stay connected with their trusted contacts by providing 
