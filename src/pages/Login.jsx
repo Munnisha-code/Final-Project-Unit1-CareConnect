@@ -42,6 +42,9 @@ function Login(){
 
                     <button type="submit" className ="login-button"> Login </button>
                 </form>
+                <p> If you are not a member? {''}
+                    <link to='/RegisterForm '> Please register Here </link>
+                </p>
             </center>
         </div>
 
