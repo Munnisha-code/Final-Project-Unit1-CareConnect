@@ -21,20 +21,25 @@ function Login(){
    }
    
    // submit handler
-   
+
    const submitHandler = ev => {
          evpreventDefault();
 
          console.log(data)
    }
     return(
-        <div>
+        <div className="Login-container">
             <center>
-                <form onSubmit ={submitHandler} >
+                <form onSubmit ={submitHandler} className="login-form" >
+                    
+                    <h3> Login to CC</h3>
+
                     <label> UserName: </label>
                     <input type="text" name="username" value={ username} onChange={changeHandler}/> <br />
+
                     <lable> Password: </lable>
                     <input type="password" name="password" value={password} onChange={changeHandler} /><br />
+
                     <button type="submit" className ="login-button"> Login </button>
                 </form>
             </center>
