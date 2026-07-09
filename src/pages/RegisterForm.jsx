@@ -1,7 +1,12 @@
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterForm(){
+
+    // useNavigate is used to move the user to another page after form submission.
+
+    const navigate = useNavigate();
 
     const [ data, setData] = useState({
         firstName: '',
@@ -16,21 +21,25 @@ function RegisterForm(){
     const {firstName, lastName, mobileNumber, email, password, confirmPassword} = data;
 
     const changeHandler = ev => {
-         setData({...data, [ev.target.name]: ev.target.value})
+         setData({...data, [ev.target.name]: ev.target.value});
     }
     
     const submitHandler = ev => {
          ev.preventDefault();
 
          console.log(data)
+
+         navigate('/trusted-contact');
     }
+
+     
 
 
     return(
         <div>
             <h3> Register Form</h3>
 
-            <form onSubmit = 'submitHandler'>
+            <form onSubmit = {submitHandler}>
 
                 <label> First Name: </label>
                 <input type ='text' name = 'firstName' value = {firstName} onChange ={changeHandler} /> <br />
@@ -53,6 +62,7 @@ function RegisterForm(){
                 <button type = 'submit'> Register </button> <br /> <br />
 
             </form>
+
         </div>
     );
 }
