@@ -1,7 +1,10 @@
 
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function TrustedContactForm(){
+
+    const navigate = useNavigate();
 
     const [data, setData] = useState({
         contact1:{name:'', mobileNumber:'', relationship:''} ,
@@ -21,7 +24,9 @@ function TrustedContactForm(){
    const submitHandler = ev => {
          ev.preventDefault();
 
-         console.log(data)
+         console.log(data);
+
+       navigate ( '/thank-you');  
    }
 
     return(

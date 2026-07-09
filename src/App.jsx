@@ -12,6 +12,7 @@ import Login from './pages/Login';
 import RegisterForm from './pages/RegisterForm';
 import TrustedContactForm from './pages/TrustedContactForm';
 import OneClickSendMessage from './pages/OneClickSendMessage';
+import ThankYou from './pages/Thankyou';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                 <Route path ="/registerForm" element = {< RegisterForm />} />
                 <Route path ="/trusted-contact" element = {< TrustedContactForm/>} />
                 <Route path = "/one-click-send-message" element = {< OneClickSendMessage/>} />
+                <Route path = "/thank-you" element = {< ThankYou />} />
 
             </Routes>
             
