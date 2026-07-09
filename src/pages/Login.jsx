@@ -37,7 +37,7 @@ function Login(){
 
     const loginHandler = () => {
         
-        navigate('/send-message');
+        navigate('/one-click-send-message');
     }     
    
     return(
