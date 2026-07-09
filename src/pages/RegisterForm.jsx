@@ -32,8 +32,6 @@ function RegisterForm(){
          navigate('/trusted-contact');
     }
 
-     
-
 
     return(
         <div>

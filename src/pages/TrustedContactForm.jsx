@@ -25,9 +25,11 @@ function TrustedContactForm(){
     return(
 
         <div>
-            <h3> contacts: </h3> <br />
+            <h3> Add Trusted Contacts </h3> <br />
+
             <form onSubmit ={submitHandler}>
-              <h4> Contact 1</h4>
+               
+               <h4> Contact 1</h4>
 
                 <label> Name </label>
                 <input type='text' name='name' value = { name} onChange={changeHandler}/> <br />

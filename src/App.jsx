@@ -10,6 +10,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Login from './pages/Login';
 import RegisterForm from './pages/RegisterForm';
+import TrustedContactForm from './pages/TrustedContactForm';
 
 
 function App() {
@@ -23,10 +24,12 @@ function App() {
 
              <Routes> 
 
-                <Route path ="/" element={<Home/>} />
-                <Route path ="/about" element={<About/>} />
+                <Route path ="/" element = {<Home/>} />
+                <Route path ="/about" element = {<About/>} />
                 <Route path ="/login" element = {<Login/>}/>
-                <Route path ="/registerForm" element ={< RegisterForm />} />
+                <Route path ="/registerForm" element = {< RegisterForm />} />
+                <Route path ="/trusted-contact" element = {< TrustedContactForm/>} />
+
             </Routes>
             
           <Footer/>
