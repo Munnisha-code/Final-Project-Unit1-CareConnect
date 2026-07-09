@@ -1,7 +1,16 @@
 
-
+import React, { useState } from 'react';
 
 function TrustedContactForm(){
+
+    const [data, setData] = useState({
+        name:'',
+        mobileNumber:'',
+        relationship:''
+
+    });
+
+    const{ name,mobileNumber,relationship } = data;
 
     return(
 
