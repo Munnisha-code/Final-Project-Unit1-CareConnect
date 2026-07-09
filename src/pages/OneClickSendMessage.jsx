@@ -1,5 +1,6 @@
 
 import React, {useState} from 'react';
+import './Pages.css';
 
 function OneClickSendMessage(){
     const [ message, setMessage] = useState('');
@@ -19,18 +20,19 @@ function OneClickSendMessage(){
     const sendMessageHandler = () => { };
 
     return( 
-       <div className='message-container'>   
+       <div className ='message-container'>   
            <h4> Send a Quick Message </h4>
-            
+
+          <div className ='message-buttons'> 
             { messages.map((msg, index) => ( 
-                  <button type='button' key={index} onClick= {() => setMessage(msg)}> 
+                  <button className ='quick-message-button' type='button' key={index} onClick= {() => setMessage(msg)}> 
                          {msg}
                   </button>
             ))}
-
-            <textarea placeholder='Type new message' value={message} onChange = {(ev) => setMessage(ev.target.value)}/>
+            </div> 
+            <textarea className ='message-textarea' placeholder='Type new message' value={message} onChange = {(ev) => setMessage(ev.target.value)}/>
            
-           <button type='button' onClick={sendMessageHandler}> Send </button>
+           <button className = 'send-button' type='button' onClick={sendMessageHandler}> Send </button>
        </div>
     );
 }
