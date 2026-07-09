@@ -30,7 +30,7 @@ function OneClickSendMessage(){
 
             <textarea placeholder='Type new message' value={message} onChange = {(ev) => setMessage(ev.target.value)}/>
            
-           <button type='button' onclick={sendMessageHandeler}> Send </button>
+           <button type='button' onClick={sendMessageHandler}> Send </button>
        </div>
     );
 }

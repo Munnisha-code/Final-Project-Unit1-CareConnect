@@ -4,9 +4,11 @@ import React, { useState } from 'react';
 function TrustedContactForm(){
 
     const [data, setData] = useState({
-        name:'',
-        mobileNumber:'',
-        relationship:''
+        contact1:{name:'', mobileNumber:'', relationship:''} ,
+        contact2:{name:'', mobileNumber:'', relationship:''} ,
+        contact3:{name:'', mobileNumber:'', relationship:''} ,
+        contact4:{name:'', mobileNumber:'', relationship:''} ,
+        contact5:{name:'', mobileNumber:'', relationship:''} 
 
     });
 
@@ -37,7 +39,7 @@ function TrustedContactForm(){
                 <label> Mobile Number </label>
                 <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber} onChange={changeHandler}/> <br />
 
-                <lable> Relationship </lable>
+                <label> Relationship </label>
                 <input type='text' name='relationship' value = { relationship} onChange={changeHandler} /> <br />
 
                 <button type='submit'> Save </button>
@@ -45,56 +47,57 @@ function TrustedContactForm(){
               <h4> Contact 2</h4>
 
                 <label> Name </label>
-                <input type='text' name='name' value = { name} /> <br />
+                <input type='text' name='name' value = { name} onChange={changeHandler} /> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber}/> <br />
+                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber} onChange={changeHandler}/> <br />
 
-                <lable> Relationship </lable>
-                <input type='text' name='relationship' value = { relationship} /> <br />
+                <label> Relationship </label>
+                <input type='text' name='relationship' value = { relationship} onChange={changeHandler} /> <br />
 
                 <button type='submit'> Save </button>
 
               <h4> Contact 3 </h4>
 
                 <label> Name </label>
-                <input type='text' name='name' value = { name} /> <br />
+                <input type='text' name='name' value = { name} onChange={changeHandler} /> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber}/> <br />
+                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber} onChange={changeHandler}/> <br />
 
-                <lable> Relationship </lable>
-                <input type='text' name='relationship' value = { relationship} /> <br />
+                <label> Relationship </label>
+                <input type='text' name='relationship' value = { relationship}  onChange={changeHandler}/> <br />
 
                 <button type='submit'> Save </button>
 
             <h4> Contact 4 </h4>
 
                 <label> Name </label>
-                <input type='text' name='name' value = { name} /> <br />
+                <input type='text' name='name' value = { name}  onChange={changeHandler}/> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber}/> <br />
+                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber} onChange={changeHandler}/> <br />
 
-                <lable> Relationship </lable>
-                <input type='text' name='relationship' value = { relationship} /> <br />
+                <label> Relationship </label>
+                <input type='text' name='relationship' value = { relationship} onChange={changeHandler} /> <br />
 
                 <button type='submit'> Save </button>
 
             <h4> Contact 5 </h4>
 
                 <label> Name </label>
-                <input type='text' name='name' value = { name} /> <br />
+                <input type='text' name='name' value = { name}  onChange={changeHandler}/> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber}/> <br />
+                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber} onChange={changeHandler}/> <br />
 
-                <lable> Relationship </lable>
-                <input type='text' name='relationship' value = { relationship} /> <br />
+                <label> Relationship </label>
+                <input type='text' name='relationship' value = { relationship} onChange={changeHandler}/> <br />
 
                 <button type='submit'> Save </button>
 
             </form>
+            
         </div>
     );
 }

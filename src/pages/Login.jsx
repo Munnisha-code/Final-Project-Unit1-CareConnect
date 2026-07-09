@@ -31,7 +31,11 @@ function Login(){
    const submitHandler = ev => {
          ev.preventDefault();
 
-         console.log(data)
+         console.log(data) 
+
+      if ( data.username && data.password){
+        navigate('/one-click-send-message');
+      }   
 
     }
 
@@ -50,7 +54,7 @@ function Login(){
                     <label> UserName: </label>
                     <input type="text" name="username" value={ username} onChange={changeHandler}/> <br />
 
-                    <lable> Password: </lable>
+                    <label> Password: </label>
                     <input type="password" name="password" value={password} onChange={changeHandler} /><br />
 
                     <button type="submit" className ="login-button"> Login </button>
