@@ -4,17 +4,21 @@ import React, { useState } from 'react';
 function TrustedContactForm(){
 
     const [data, setData] = useState({
-        name:'',
-        mobileNumber:'',
-        relationship:''
+       contact1:{ name:'', mobileNumber:'', relationship:''},
+       contact2:{ name:'', mobileNumber:'', relationship:''},
+       contact3:{ name:'', mobileNumber:'', relationship:''},
+       contact4:{ name:'', mobileNumber:'', relationship:''},
+       contact5:{ name:'', mobileNumber:'', relationship:''}
 
     });
 
-    const{ name,mobileNumber,relationship } = data;
 
-    const changeHandler = ev =>{
-         setData({...data, [ev.target.name]: ev.target.value})
-   }
+    const changeHandler = (contact, ev) =>{
+         setData({...data, 
+            [contact]:{ ...data[contact], 
+            [ev.target.name]: ev.target.value}
+        });
+      }
 
    const submitHandler = ev => {
          ev.preventDefault();
@@ -32,65 +36,61 @@ function TrustedContactForm(){
                <h4> Contact 1</h4>
 
                 <label> Name </label>
-                <input type='text' name='name' value = { name} onChange={changeHandler}/> <br />
+                <input type='text' name='name' value = {data.contact1.name} onChange={(ev) => changeHandler('contact1', ev)}/> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber} onChange={changeHandler}/> <br />
+                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={data.contact1.mobileNumber} onChange={(ev) => changeHandler('contact1', ev)}/> <br />
 
                 <lable> Relationship </lable>
                 <input type='text' name='relationship' value = { relationship} onChange={changeHandler} /> <br />
 
-                <button type='submit'> Save </button>
 
               <h4> Contact 2</h4>
 
                 <label> Name </label>
-                <input type='text' name='name' value = { name} /> <br />
+                <input type='text' name='name' value = { data.contact2.name} onChange={(ev) => changeHandler('contact2', ev)} /> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber}/> <br />
+                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={data.contact2.mobileNumber} onChange={(ev) => changeHandler('contact2', ev)}/> <br />
 
-                <lable> Relationship </lable>
-                <input type='text' name='relationship' value = { relationship} /> <br />
+                <label> Relationship </label>
+                <input type='text' name='relationship' value = { data.contact2.relationship} onChange={(ev) => changeHandler('contact2', ev)} /> <br />
 
-                <button type='submit'> Save </button>
 
               <h4> Contact 3 </h4>
 
                 <label> Name </label>
-                <input type='text' name='name' value = { name} /> <br />
+                <input type='text' name='name' value = { data.contact3.name} onChange={(ev) => changeHandler('contact3', ev)} /> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber}/> <br />
+                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={data.contact3.mobileNumber} onChange={(ev) => changeHandler('contact3', ev)}/> <br />
 
-                <lable> Relationship </lable>
-                <input type='text' name='relationship' value = { relationship} /> <br />
+                <label> Relationship </label>
+                <input type='text' name='relationship' value = {data.contact3.relationship}  onChange={(ev) => changeHandler('contact3', ev)}/> <br />
 
-                <button type='submit'> Save </button>
 
             <h4> Contact 4 </h4>
 
                 <label> Name </label>
-                <input type='text' name='name' value = { name} /> <br />
+                <input type='text' name='name' value = { data.contact4.name}  onChange={(ev) => changeHandler('contact4', ev)}/> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber}/> <br />
+                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={data.contact4.mobileNumber} onChange={(ev) => changeHandler('contact4', ev)}/> <br />
 
-                <lable> Relationship </lable>
-                <input type='text' name='relationship' value = { relationship} /> <br />
+                <label> Relationship </label>
+                <input type='text' name='relationship' value = {data.contact4.relationship} onChange={(ev) => changeHandler('contact4', ev)} /> <br />
 
-                <button type='submit'> Save </button>
 
             <h4> Contact 5 </h4>
 
                 <label> Name </label>
-                <input type='text' name='name' value = { name} /> <br />
+                <input type='text' name='name' value = { data.contact5.name}  onChange={(ev) => changeHandler('contact5', ev)}/> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={mobileNumber}/> <br />
+                <input type ="tel" id='mobileNumber' name='mobileNumber' value ={data.contact5.mobileNumber} onChange={(ev) => changeHandler('contact5', ev)}/> <br />
 
-                <lable> Relationship </lable>
-                <input type='text' name='relationship' value = { relationship} /> <br />
+                <label> Relationship </label>
+                <input type='text' name='relationship' value = {data.contact5.relationship} onChange={(ev) => changeHandler('contact5', ev)}/> <br />
 
                 <button type='submit'> Save </button>
 
