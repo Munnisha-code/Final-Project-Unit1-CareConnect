@@ -19,7 +19,7 @@ function OneClickSendMessage(){
     const sendMessageHandler = () => { };
 
     return( 
-       <div>   
+       <div className='message-container'>   
            <h4> Send a Quick Message </h4>
             
             { messages.map((msg, index) => ( 
