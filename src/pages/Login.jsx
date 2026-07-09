@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import {  Link } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 
 
 function Login(){
@@ -11,6 +11,10 @@ function Login(){
         password : ""
 
    });
+    
+   // After user Login page navigate to oneclicksendmessage
+
+   const navigate = useNavigate();
 
    //Destructuring the data
 
@@ -28,7 +32,14 @@ function Login(){
          ev.preventDefault();
 
          console.log(data)
-   }
+
+    }
+
+    const loginHandler = () => {
+        
+        navigate('/send-message');
+    }     
+   
     return(
         <div className="Login-container">
             <center>
