@@ -1,4 +1,8 @@
-/* register form */
+
+
+/* Thankyou page */
+
+/*-------------------------------- Register Form ---------------------------- */
 
 .register-container {
     min-height: 100vh;
@@ -84,7 +88,8 @@
     }
 }
 
-/* Trusted Contact Form */
+
+/*    ---------------- Trusted Contact Form -----------------------                                */
 
 .trusted-contact-container {
     width: 700px;
@@ -172,7 +177,7 @@
 
 .trusted-save-button:hover {
    background-color: #d781e4;
-   transform: scale(1.00s);
+   transform: scale(1.05);
 
 }
 
@@ -226,7 +231,8 @@
 
 
 
-/* OneClickSendMessages*/
+
+/* --------------------------   OneClickSendMessages-------------------------*/
 
 .message-container {
     display: flex;
