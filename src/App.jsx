@@ -30,7 +30,7 @@ function App() {
                 <Route path ="/about" element = {<About/>} />
                 <Route path ="/login" element = {<Login/>}/>
                 <Route path ="/registerForm" element = {< RegisterForm />} />
-                <Route path ="/trusted-contact" element = {< TrustedContactForm/>} />
+                <Route path ="/trusted-contacts" element = {< TrustedContactForm/>} />
                 <Route path = "/one-click-send-message" element = {< OneClickSendMessage/>} />
                 <Route path = "/thank-you" element = {< ThankYou />} />
 
