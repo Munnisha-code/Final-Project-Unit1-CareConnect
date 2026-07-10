@@ -1,18 +1,10 @@
 
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import './Pages.css';
-=======
->>>>>>> main
 import { useNavigate } from 'react-router-dom';
 
 function RegisterForm(){
 
-<<<<<<< HEAD
-=======
-    // useNavigate is used to move the user to another page after form submission.
-
->>>>>>> main
     const navigate = useNavigate();
 
     const [ data, setData] = useState({
