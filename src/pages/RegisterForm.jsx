@@ -1,10 +1,18 @@
 
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import './Pages.css';
+=======
+>>>>>>> main
 import { useNavigate } from 'react-router-dom';
 
 function RegisterForm(){
 
+<<<<<<< HEAD
+=======
+    // useNavigate is used to move the user to another page after form submission.
+
+>>>>>>> main
     const navigate = useNavigate();
 
     const [ data, setData] = useState({
@@ -20,7 +28,7 @@ function RegisterForm(){
     const {firstName, lastName, mobileNumber, email, password, confirmPassword} = data;
 
     const changeHandler = ev => {
-         setData({...data, [ev.target.name]: ev.target.value})
+         setData({...data, [ev.target.name]: ev.target.value});
     }
     
     const submitHandler = ev => {
@@ -58,6 +66,7 @@ function RegisterForm(){
                 <button className='register-button' type = 'submit'> Register </button> <br /> <br />
 
             </form>
+
         </div>
     );
 }
