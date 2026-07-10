@@ -1,7 +1,11 @@
 
 import React, { useState } from 'react';
+import './Pages.css';
+import { useNavigate } from 'react-router-dom';
 
 function RegisterForm(){
+
+    const navigate = useNavigate();
 
     const [ data, setData] = useState({
         firstName: '',
@@ -23,14 +27,15 @@ function RegisterForm(){
          ev.preventDefault();
 
          console.log(data)
+          navigate('/trusted-contacts');
     }
 
 
     return(
-        <div>
-            <h3> Register Form</h3>
+        <div className='register-container'>
+            <h3 className='register-title'> Register Form</h3>
 
-            <form onSubmit = 'submitHandler'>
+            <form  className='register-form' onSubmit = {submitHandler}>
 
                 <label> First Name: </label>
                 <input type ='text' name = 'firstName' value = {firstName} onChange ={changeHandler} /> <br />
@@ -48,9 +53,9 @@ function RegisterForm(){
                 <input type ='password' name = 'password' value = {password} onChange ={changeHandler} /> <br />
 
                 <label> Confirm Password: </label>
-                <input type ='confirmPassword' name = 'confirmPassword' value = {confirmPassword} onChange ={changeHandler} /> <br /> <br />
+                <input type ='confirmPassword' name = 'Password' value = {confirmPassword} onChange ={changeHandler} /> <br /> <br />
 
-                <button type = 'submit'> Register </button> <br /> <br />
+                <button className='register-button' type = 'submit'> Register </button> <br /> <br />
 
             </form>
         </div>
