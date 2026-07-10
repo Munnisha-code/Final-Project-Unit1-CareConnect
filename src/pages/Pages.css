@@ -1,5 +1,42 @@
 
 
+/* Thankyou page */
+
+.thankyou-container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #f3f8ff;
+}
+
+
+.thankyou-container h3 {
+    color: #2563eb;
+    font-size: 30px;
+}
+
+.thankyou-container h4 {
+    color: #23af33;
+    font-weight: normal;
+}
+
+.thankyou-button {
+    padding: 12px 25px;
+    background-color: #7f9edf;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.thankyou-button:hover {
+    background-color: #e9a9eb;
+}
+
 
 /* OneClickSendMessages*/
 

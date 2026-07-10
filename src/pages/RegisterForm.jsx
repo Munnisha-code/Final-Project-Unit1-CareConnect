@@ -30,7 +30,7 @@ function RegisterForm(){
          console.log(data)
 
          navigate('/trusted-contact');
-         navigate('/thank-you');
+         
     }
 
 
