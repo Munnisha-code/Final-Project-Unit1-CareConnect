@@ -5,7 +5,7 @@ import './Pages.css';
 function OneClickSendMessage(){
     const [ message, setMessage] = useState('');
     const [messageSent, setMessageSent] = useState(false);
-    const [errormessage, setErrorMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
     const messages = [
 
@@ -30,23 +30,72 @@ function OneClickSendMessage(){
 
     };
 
-    return( 
-       <div className ='message-container'>   
-           <h4> Send a Quick Message </h4>
+    const sendAnotherMessageHandler = () =>{ 
+        setMessageSent(false);
+        setMessage('');
+        setErrorMessage('');
+    };
 
-          <div className ='message-buttons'> 
-            { messages.map((msg, index) => ( 
-                  <button className ='quick-message-button' type='button' key={index} onClick= {() => setMessage(msg)}> 
-                         {msg}
-                  </button>
-            ))}
-            </div> 
-            <textarea className ='message-textarea' placeholder='Type new message' value={message} onChange = {(ev) => setMessage(ev.target.value)}/>
+    return( 
+
+     <main>  
+        
+        <div className ='message-container'>   
+
+            { 
+                messageSent ? (
+                    <div className = 'success-section'> 
+                         <h4> Send a Quick Message </h4>
+                         <p> Your message:</p>
+                         <p> {message} </p>
+                         <p> Your trusted contacts have been notified.</p>
+
+                         <button 
+                                className='send-button'
+                                type='button'
+                                onClick={sendAnotherMessageHandler}
+                            >
+                                Send Another Message
+                            </button>
+                    </div> 
+           ) : (
+
+                    <div className='message-form-section'>
+
+                           <h4>Send a Quick Message</h4>
+      
+                        <div className ='message-buttons'> 
+
+                            { messages.map((msg, index) => ( 
+                                 <button className ='quick-message-button' 
+                                         type='button' 
+                                         key={index} 
+                                         onClick= {() => setMessage(msg)}> 
+                                    {msg}
+                                 </button>
+                            ))}
+                        </div> 
+                
+                            <textarea className ='message-textarea' 
+                                      placeholder='Type new message' 
+                                      value={message} 
+                                      onChange = {(ev) => setMessage(ev.target.value)}/>
+                    
+                           {
+                               errorMessage && ( <p className='error-message'> {errorMessage} </p> )
+                           }
+
            
-           <button className = 'send-button' type='button' onClick={sendMessageHandler}> Send </button>
-       </div>
+                            <button className = 'send-button' type='button' onClick={sendMessageHandler}> Send </button>
+
+                   </div>
+                )
+            }  
+        </div>
+     </main>
+
     );
 }
-
+  
 
 export default OneClickSendMessage;
