@@ -267,12 +267,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 500px;
+    width: 700px;
     margin: 40px auto;
 }
 
 .message-buttons {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
@@ -300,14 +301,13 @@
     width: 250px;
     min-height: 70px;
     padding: 15px;
-
     border-radius: 12px;
     border: none;
-
-    background-color: #4caf50;
-    color: white;
+    background-color: linear-gradient(135deg, #6dd5ed, #2193b0);
+    color:  #1f2937;
 
     font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
 
     display: flex;
@@ -315,12 +315,46 @@
     justify-content: center;
 
     text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+
+    transition: all 0.3s ease;
 }
 
 .quick-message-button:hover {
-    background-color: #d781e4;
-    transform: scale(1.05);
+    background-color: linear-gradient(135deg, #667eea, #764ba2);
+    transform:translateY(-5px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     transition: 1s;
+}
+
+.emergency-button {
+    width: 200px;
+    min-height: 70px;
+    padding: 15px;
+
+    border-radius: 16px;
+    border: none;
+
+    background-color: #ffdddd;
+    color: #b30000;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.emergency-button:hover {
+    background-color: red;
+    color: white;
+
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow: 0 10px 20px rgba(255,0,0,0.3);
 }
 
 @media (max-width: 600px) {

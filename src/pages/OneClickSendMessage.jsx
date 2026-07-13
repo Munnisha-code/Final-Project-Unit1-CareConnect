@@ -14,14 +14,14 @@ function OneClickSendMessage(){
         " ✅ Everything is okay. I am safe. ",
         " 🆘 I need help. Please contact me as soon as possible.",
         " 🏢 I am at the office",
-        " 🚨 Emergency ",
+        " 🚨 Emergency 🚨 ",
         " 🌳 I am at the park."
 
     ];
       
     const sendMessageHandler = () => { 
         if (message.trim() === ''){
-            setErrorMessage('Please select or type a message first.');
+            setErrorMessage('Please select or type a message 😊.');
         }
         else {
             setErrorMessage('');
@@ -39,13 +39,14 @@ function OneClickSendMessage(){
     return( 
 
      <main>  
-        
+
         <div className ='message-container'>   
 
             { 
                 messageSent ? (
                     <div className = 'success-section'> 
-                         <h4> Send a Quick Message </h4>
+
+                         <h4> 🤩 Message sent suceffuly!  </h4>
                          <p> Your message:</p>
                          <p> {message} </p>
                          <p> Your trusted contacts have been notified.</p>
@@ -67,7 +68,7 @@ function OneClickSendMessage(){
                         <div className ='message-buttons'> 
 
                             { messages.map((msg, index) => ( 
-                                 <button className ='quick-message-button' 
+                                 <button className = {msg.includes("Emergency") ? "emergency-button" : "quick-message-button"} 
                                          type='button' 
                                          key={index} 
                                          onClick= {() => setMessage(msg)}> 
