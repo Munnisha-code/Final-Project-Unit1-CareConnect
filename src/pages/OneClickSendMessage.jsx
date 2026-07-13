@@ -4,20 +4,31 @@ import './Pages.css';
 
 function OneClickSendMessage(){
     const [ message, setMessage] = useState('');
+    const [messageSent, setMessageSent] = useState(false);
+    const [errormessage, setErrorMessage] = useState('');
 
     const messages = [
 
-        "I am at Home.", 
-        " I am travelling right now. I will update you when I reach my destination. ",
-        " Everything is okay. I am safe. ",
-        " I need help. Please contact me as soon as possible.",
-        " I am at the office",
-        " Emergency ",
-        " I am at the park."
+        " 🏠 I am at Home.", 
+        " 🚗 I am travelling right now. I will update you when I reach my destination. ",
+        " ✅ Everything is okay. I am safe. ",
+        " 🆘 I need help. Please contact me as soon as possible.",
+        " 🏢 I am at the office",
+        " 🚨 Emergency ",
+        " 🌳 I am at the park."
 
     ];
       
-    const sendMessageHandler = () => { };
+    const sendMessageHandler = () => { 
+        if (message.trim() === ''){
+            setErrorMessage('Please select or type a message first.');
+        }
+        else {
+            setErrorMessage('');
+            setMessageSent(true);
+        }
+
+    };
 
     return( 
        <div className ='message-container'>   
