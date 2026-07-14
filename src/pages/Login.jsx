@@ -6,12 +6,9 @@ import userLogin from '../mockData/userLogin.json';
 
 function Login(){
 
-   const [data, setData]=useState({
-        
-        username : "",
-        password : ""
+   const [data, setData]=useState({ username : "", password : ""});
 
-   });
+   const [ error, setError] = useState('');
     
    // After user Login page navigate to oneclicksendmessage
 
@@ -32,11 +29,18 @@ function Login(){
    const submitHandler = ev => {
          ev.preventDefault();
 
-         console.log(data) 
+    
+    const user = userLogin.find((item) =>
+                       item.email === data.username && 
+                       item.password === data.password        
+        );
 
-      if ( data.username && data.password){
+      if (user) {
         navigate('/one-click-send-message');
-      }   
+      } 
+      else {
+        setError('invalid username or password');
+      }  
 
     }
 
@@ -53,14 +57,15 @@ function Login(){
                     <h3> Login to CC</h3>
 
                     <label> UserName: </label>
-                    <input type="text" name="username" value={ username} onChange={changeHandler}/> <br />
+                    <input type="text" name="username" value={ username} placeholder='you@example.com' onChange={changeHandler}/> <br />
 
                     <label> Password: </label>
                     <input type="password" name="password" value={password} onChange={changeHandler} /><br />
 
                     <button type="submit" className ="login-button"> Login </button>
-                </form> 
-                <br />
+
+                    { error && <p className="login-error-message"> {error}  </p>}
+                </form> <br />
 
                 <p> If you are not a member? {''}
                     <Link to='/RegisterForm '> Please register Here </Link>
