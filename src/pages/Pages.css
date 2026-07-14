@@ -1,5 +1,5 @@
 
-/* --------------------- Home Page Styling  ---------------------*/
+/******************** Home Page Styling  ****************************/
 
 .home-container {
 
@@ -82,20 +82,17 @@
 
 @media(max-width:768px){
 
-    .home-container {
+.home-container {
         padding: 25px 15px;
 
     }
-
-    .hero-section,.features-section,.works-section {
+.hero-section,.features-section,.works-section {
 
         width: 95%;
         padding: 20px;
 
     }
-
-
-    .features-section ol {
+.features-section ol {
         grid-template-columns: 1fr;
 
     }
@@ -130,7 +127,80 @@
 
 }
 
-/*-------------------------Thankyou page----------------------------- */
+           /*************** About Page ************************/
+
+.about-container {
+
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color:  #e8f5e9;
+
+}
+.about-intro,
+.about-card {
+
+    background-color: white;
+     padding: 30px;
+     border-radius: 20px;
+     max-width: 900px;
+     width: 90%;
+     margin: auto;
+     box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+     transition: 0.3s;
+
+}
+
+.about-intro:hover,
+.about-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.mission-vision-container {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+
+}
+.about-card h2,
+.about-intro h2 {
+
+    text-align: center;
+    color: #2563eb;
+
+}
+.about-card p,
+.about-intro p {
+
+    line-height: 1.6;
+    color: #333;
+
+}
+
+
+@media(max-width:768px){
+
+.mission-vision-container {
+    grid-template-columns: 1fr;
+
+ }
+.about-intro,
+.about-card {
+    width: 95%;
+    padding:20px;
+}
+
+}
+
+/************************ Thankyou page ************************/
 
 .thankyou-container {
     min-height: calc(100vh - 120px);
