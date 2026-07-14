@@ -1,27 +1,94 @@
 
-header, footer{
+/* ------------------------------ Header Styling ---------------------------- */
 
-    background-color: rgb(160, 241, 160);
-    text-align: center;
-    padding: 5px;
-    border-radius: 10px;
+header {
+   
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #84f48d;
 }
 
-body{
-
-    background-color: rgb(192, 227, 210);
+header h1 {
+    color: rgb(70, 122, 236);
+    margin: 0;
+    font-size: 30px;
 }
 
+
+
+/* --------------------- Navbar styling ------------------------------------*/
 
  .navbar {
-       
+     
     display: flex;
-    gap: 10px;
-    text-align: right;
+    gap: 30px;
+}
 
-         }
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
 
-  /* Styling for Login Page*/ 
+.navbar a:hover {
+    color: #f38d19;
+    transform: translateY(-2px);
+ }
+
+  /*---------------------------- Mobile & Tab responsive ----------------------*/
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px 25px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .navbar {
+        gap: 20px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+}
+
+/* mobile*/
+
+@media (max-width: 480px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+}
+
+  /*---------------------------- Login Page --------------------------------*/ 
 
 .login-container {
     display: flex;
