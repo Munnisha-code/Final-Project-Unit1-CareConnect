@@ -1,6 +1,136 @@
 
+/* --------------------- Home Page Styling  ---------------------*/
 
-/* Thankyou page */
+.home-container {
+
+    background-image: url("../assets/careconnect.jpg");  
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.hero-section,
+.features-section,
+.works-section {
+
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.88);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: 1s;
+}
+
+
+.hero-section:hover,
+.features-section:hover,
+.works-section:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.hero-section h2,
+.features-section h2,
+.works-section h2 {
+
+    text-align: center;
+
+    color: #2563eb;
+
+    margin-bottom: 20px;
+
+}
+
+.hero-section p,.works-section p {
+
+    color: #333;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: justify;
+
+}
+
+.features-section ol {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0;
+
+}
+
+
+.features-section li {
+
+    list-style-position: inside;
+    background-color: #e8f8f5;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+
+}
+
+@media(max-width:768px){
+
+    .home-container {
+        padding: 25px 15px;
+
+    }
+
+    .hero-section,.features-section,.works-section {
+
+        width: 95%;
+        padding: 20px;
+
+    }
+
+
+    .features-section ol {
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .hero-section h2,
+    .features-section h2,
+    .works-section h2 {
+
+        font-size: 22px;
+
+    }
+
+
+    .hero-section p,
+    .works-section p {
+
+        font-size: 14px;
+
+    }
+
+
+    .features-section li {
+
+        font-size: 14px;
+
+    }
+
+}
+
+/*-------------------------Thankyou page----------------------------- */
 
 .thankyou-container {
     min-height: calc(100vh - 120px);

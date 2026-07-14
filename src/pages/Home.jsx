@@ -4,8 +4,8 @@
 
 function Home(){
     return(
-  <main>
-        <section>
+  <main className = 'home-container'>
+        <section className = "hero-section">
             <h2>Welcome to Family safety App</h2>
             <p>
                  CareConnect is a Family Safety App designed to help users stay connected with their loved ones during daily activities, travel, and emergency situations. 
@@ -13,7 +13,7 @@ function Home(){
             </p>
         </section>
 
-        <section>
+        <section className="features-section">
            <h2> Features : </h2>
             
             <ol>
@@ -25,7 +25,8 @@ function Home(){
             </ol>
            
         </section>
-        <section>
+
+        <section className="works-section">
             <h2> How it works</h2>
             <p>
                 CareConnect works by providing a simple and fast way for users to share their safety status with trusted contacts. First, users create an account and complete their profile details. 
