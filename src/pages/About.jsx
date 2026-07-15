@@ -45,41 +45,87 @@ function About(){
 
             <section className="about-card">
                 <h2> Mission</h2>
-                <p>
-                    Our mission is to improve personal safety through fast communication and easy-to-use technology. CareConnect focuses on creating a secure platform where users can manage trusted contacts, send emergency alerts, track previous updates, and stay connected with the people who care about them.
-                </p>
+                  <ul>
+                     <li> 
+                        To provide a simple and reliable safety platform that helps
+                        users stay connected with their trusted contacts.
+                     </li>
+
+                     <li> 
+                        To enable quick communication through safety updates and
+                        emergency alerts during important situations.
+                     </li>
+
+                     <li> 
+                        To support users by providing secure and easy-to-use safety
+                        features for everyday activities.
+                     </li>
+
+                     <li>
+                        To help families stay informed and connected whenever support
+                        is needed.
+                     </li>
+
+                  </ul>
             </section>
 
             <section className="about-card">
                  <h2> Vision</h2>
-                 <p>
-                   Our vision is to create a safer and more connected community where everyone can feel confident while traveling or performing daily activities. By providing simple safety features and quick communication tools, CareConnect aims to support users and their families whenever they need assistance.
-                </p>
+                  <ul>
+                     <li>
+                       To create a safer and more connected community where people
+                       can feel confident during their daily activities.
+                     </li>
+
+                     <li>
+                        To become a trusted safety application that improves
+                        communication between users and their loved ones.
+                     </li>
+
+                     <li>
+                        To provide innovative safety features that make emergency
+                        support faster and easier.
+                     </li>
+
+                     <li>
+                        To build a future where technology helps protect and connect
+                        families.
+                     </li>
+                  </ul>
             </section>
          </div>
 
             <section className="about-card">
+
                 <h2>Why You have to Choose Care Connect App</h2>
+                 
+                <h3>Simple and Reliable Safety Solution</h3>
                 <p>
-                    CareConnect is designed to make personal safety simple, fast, and reliable. 
-                    The app helps users stay connected with their trusted contacts by providing 
-                    quick safety updates, emergency alerts, and location sharing features. 
-                    Instead of worrying about how to communicate during unexpected situations, 
-                    users can easily send their status with just a few clicks.
+                    CareConnect provides a simple way for users to stay connected with
+                    their trusted contacts. Users can share safety updates and important
+                    information whenever support is needed.
                 </p>
 
+                <h3>Quick Emergency Communication</h3>
                 <p>
-                    CareConnect focuses on user-friendly design, secure communication, and 
-                    faster response during emergencies. Whether users are traveling, working, 
-                    studying, or spending time away from family, the app helps loved ones stay 
-                    informed and provides peace of mind.
+                   During emergency situations, users can quickly send alerts to their
+                   trusted contacts, helping families stay informed and respond faster.
                 </p>
 
+                <h3>Location Sharing and Safety Updates</h3>
                 <p>
-                    With features like trusted contacts, safety status updates, live location 
-                    sharing, and update history, CareConnect supports better communication and 
-                    helps families feel more connected and prepared in everyday situations.
+                   CareConnect allows users to share their location and safety status
+                   during travel, work, or daily activities, creating confidence for
+                   both users and their loved ones.
                 </p>
+
+                <h3>User-Friendly Experience</h3>
+                <p>
+                  The application is designed with simple navigation and secure
+                  communication features so users can access safety tools easily.
+                </p>
+                   
+
             </section>
 
         </main>
