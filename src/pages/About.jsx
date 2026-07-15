@@ -95,9 +95,9 @@ function About(){
             </section>
          </div>
 
-            <section className="about-card">
+            <section className="why-careconnect">
 
-                <h2>Why You have to Choose Care Connect App</h2>
+                <h2>Why You have to Choose Care Connect App ?</h2>
                  
                 <h3>Simple and Reliable Safety Solution</h3>
                 <p>
