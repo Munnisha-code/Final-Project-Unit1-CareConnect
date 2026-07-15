@@ -39,6 +39,38 @@ header h1 {
     transform: translateY(-2px);
  }
 
+ /*------------------------ Footer  Styling -----------------------------*/
+
+ footer {
+    background-color: #84f48d;
+    color: rgb(70, 122, 236);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+footer a {
+    color: #e95050;
+    font-size: 18px;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
   /*---------------------------- Mobile & Tab responsive ----------------------*/
 /* Tablet */
 
@@ -59,7 +91,18 @@ header h1 {
     .navbar a {
         font-size: 16px;
     }
+    
+    footer {
+        padding: 18px;
+    }
 
+    footer h4 {
+        font-size: 16px;
+    }
+
+    footer p {
+        font-size: 13px;
+    }
 }
 
 /* mobile*/
@@ -85,8 +128,26 @@ header h1 {
     .navbar a {
         font-size: 16px;
     }
+    
+    footer {
+        padding: 15px;
+    }
 
+    footer h4 {
+        font-size: 15px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+    footer a {
+        display: block;
+        margin: 8px 0;
+    }
 }
+
+
 
   /*---------------------------- Login Page --------------------------------*/ 
 
