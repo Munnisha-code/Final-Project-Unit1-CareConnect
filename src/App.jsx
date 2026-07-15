@@ -13,6 +13,7 @@ import RegisterForm from './pages/RegisterForm';
 import TrustedContactForm from './pages/TrustedContactForm';
 import OneClickSendMessage from './pages/OneClickSendMessage';
 import ThankYou from './pages/Thankyou';
+import LiveLocation from './pages/LiveLocation';
 
 
 function App() {
@@ -29,10 +30,11 @@ function App() {
                 <Route path ="/" element = {<Home/>} />
                 <Route path ="/about" element = {<About/>} />
                 <Route path ="/login" element = {<Login/>}/>
-                <Route path ="/registerForm" element = {< RegisterForm />} />
-                <Route path ="/trusted-contacts" element = {< TrustedContactForm/>} />
-                <Route path = "/one-click-send-message" element = {< OneClickSendMessage/>} />
-                <Route path = "/thank-you" element = {< ThankYou />} />
+                <Route path ="/registerForm" element = {<RegisterForm />} />
+                <Route path ="/trusted-contacts" element = {<TrustedContactForm/>} />
+                <Route path = "/one-click-send-message" element = {<OneClickSendMessage/>} />
+                <Route path = "/thank-you" element = {<ThankYou/>} />
+                <Route path = "/live-location" element ={<LiveLocation/>} />
 
             </Routes>
             

@@ -8,7 +8,8 @@ function Header(){
  const navLinks=[
                   {name: "Home", path: "/"},
                   {name: "About", path: "/about"},
-                  {name: "Login", path: "/login"}
+                  {name: "Login", path: "/login"},
+                  {name: "Live Location", path:"/live-location"}
                 ];
 
     return(
