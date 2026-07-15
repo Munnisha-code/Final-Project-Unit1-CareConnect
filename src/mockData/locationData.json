@@ -1,0 +1,24 @@
+
+
+[
+    {
+        "address": "St. Charles, Missouri",
+        "latitude": "38.7881",
+        "longitude": "-90.4974"
+    },
+    {
+        "address": "St. Louis, Missouri",
+        "latitude": "38.6270",
+        "longitude": "-90.1994"
+    },
+    {
+        "address": "Chicago, Illinois",
+        "latitude": "41.8781",
+        "longitude": "-87.6298"
+    },
+    {
+        "address": "Kansas City, Missouri",
+        "latitude": "39.0997",
+        "longitude": "-94.5786"
+    }
+]
