@@ -1,110 +1,122 @@
 
-import React, { useState } from 'react';
 import './Pages.css';
+
+import React, { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
+
+import trustedContacts from '../mockData/trustedContacts';
+
 
 function TrustedContactForm(){
 
     const navigate = useNavigate();
 
-    const [data, setData] = useState({
-       contact1:{ name:'', mobileNumber:'', relationship:''},
-       contact2:{ name:'', mobileNumber:'', relationship:''},
-       contact3:{ name:'', mobileNumber:'', relationship:''},
-       contact4:{ name:'', mobileNumber:'', relationship:''},
-       contact5:{ name:'', mobileNumber:'', relationship:''}
+    const [contacts, setContacts] = useState(trustedContacts);
 
-    });
+    const [formData, setFormData] = useState ({ name: '', mobileNumber:'', relationship:'' });
+    
+    const [ editId, setEditId] = useState(null);
 
+ //input changes handler
 
-    const changeHandler = (contact, ev) =>{
-         setData({...data, 
-            [contact]:{ ...data[contact], 
-            [ev.target.name]: ev.target.value}
-        });
-      }
+    const changeHandler = (ev) =>{ setFormData({...formData, [ev.target.name]: ev.target.value});}
 
-   const submitHandler = ev => {
-         ev.preventDefault();
+    // Add or update contacts 
 
-         console.log(data);
+   const submitHandler = ev => { ev.preventDefault();
 
-       navigate ( '/thank-you');  
-   }
+      if(editId !== null){
+
+        const updatedContacts = contacts.map((contact) => contact.id === editId ? { ...contact, ...formData} : contact);
+
+                 setContacts(updatedContacts);
+
+                 setEditId(null);
+                 }
+
+                else {
+                
+                     const newContact = { id: Date.now(), ...formData };
+
+                     setContacts([ ...contacts, newContact]);
+                    }
+
+                    setFormData ({ name:'', mobileNumber:'', relationship:'' });
+                
+    }
+      
+  
+        const editContact = (id) => {
+                
+            const selectedContact = contacts.find( contact => contact.id === id );
+
+            setFormData ({
+                name: selectedContact.name,
+                mobileNumber: selectedContact.mobileNumber,
+                relationship: selectedContact.relationship
+            });
+
+            setEditId(id);
+        }
+
+        const deleteContact= (id) => {
+
+            const updatedContacts = contacts.filter( contact => contact.id !==id );
+
+            setContacts(updatedContacts);
+        }
+       
 
     return(
 
         <div className="trusted-contact-container" >
+
             <h3 className='trusted-title' > Add Trusted Contacts </h3> <br />
 
             <form className='trusted-form' onSubmit ={submitHandler} >
 
                 <div className="contact-card" >
                
-               <h4> Contact 1</h4>
-
+   
                 <label> Name </label>
-                <input type='text' name='name' value = {data.contact1.name} onChange={(ev) => changeHandler('contact1', ev)}/> <br />
+                <input type='text' name='name' value = {formData.name} onChange = {changeHandler} /> <br />
 
                 <label> Mobile Number </label>
-                <input type ="tel"  name='mobileNumber' value ={data.contact1.mobileNumber} onChange={(ev) => changeHandler('contact1', ev)}/> <br />
+                <input type ="tel"  name='mobileNumber' value ={formData.mobileNumber} onChange = {changeHandler}/> <br />
 
                 <label> Relationship </label>
-                <input type='text' name='relationship' value = {data.contact1.relationship}     onChange={(ev) => changeHandler('contact1', ev)} /> <br />
+                <input type='text' name='relationship' value = {formData.relationship} onChange = {changeHandler} /> <br />
 
-
-              <h4> Contact 2</h4>
-
-                <label> Name </label>
-                <input type='text' name='name' value = { data.contact2.name} onChange={(ev) => changeHandler('contact2', ev)} /> <br />
-
-                <label> Mobile Number </label>
-                <input type ="tel"  name='mobileNumber' value ={data.contact2.mobileNumber} onChange={(ev) => changeHandler('contact2', ev)}/> <br />
-
-                <label> Relationship </label>
-                <input type='text' name='relationship' value = { data.contact2.relationship} onChange={(ev) => changeHandler('contact2', ev)} /> <br />
-
-
-              <h4> Contact 3 </h4>
-
-                <label> Name </label>
-                <input type='text' name='name' value = { data.contact3.name} onChange={(ev) => changeHandler('contact3', ev)} /> <br />
-
-                <label> Mobile Number </label>
-                <input type ="tel"  name='mobileNumber' value ={data.contact3.mobileNumber} onChange={(ev) => changeHandler('contact3', ev)}/> <br />
-
-                <label> Relationship </label>
-                <input type='text' name='relationship' value = {data.contact3.relationship}  onChange={(ev) => changeHandler('contact3', ev)}/> <br />
-
-
-            <h4> Contact 4 </h4>
-
-                <label> Name </label>
-                <input type='text' name='name' value = { data.contact4.name}  onChange={(ev) => changeHandler('contact4', ev)}/> <br />
-
-                <label> Mobile Number </label>
-                <input type ="tel"  name='mobileNumber' value ={data.contact4.mobileNumber} onChange={(ev) => changeHandler('contact4', ev)}/> <br />
-
-                <label> Relationship </label>
-                <input type='text' name='relationship' value = {data.contact4.relationship} onChange={(ev) => changeHandler('contact4', ev)} /> <br />
-
-
-            <h4> Contact 5 </h4>
-
-                <label> Name </label>
-                <input type='text' name='name' value = { data.contact5.name}  onChange={(ev) => changeHandler('contact5', ev)}/> <br />
-
-                <label> Mobile Number </label>
-                <input type ="tel"  name='mobileNumber' value ={data.contact5.mobileNumber} onChange={(ev) => changeHandler('contact5', ev)}/> <br />
-
-                <label> Relationship </label>
-                <input type='text' name='relationship' value = {data.contact5.relationship} onChange={(ev) => changeHandler('contact5', ev)}/> <br />
-            
+              
             </div>
 
-                <button className='trusted-save-button' type='submit'> Save </button>
+                <button className='trusted-save-button' type='submit'>
+
+                     { editId !== null? 'Update Contact': 'Add Contact'}
+
+                 </button>
 
             </form>
+
+            <div className ='contact-list' >
+                     
+                     {contacts.map((contact) => (
+                                <div className='contact-card' key = {contact.id}>
+
+                                    <h4> Trusted Contact </h4>
+                                    <p> Name: {contact.name} </p>
+                                    <p> Mobile: {contact.mobileNumber} </p>
+                                    <p> Relationship: {contact.relationship} </p>
+
+                                    <button onClick= { () => editContact(contact.id)} > Edit </button>
+
+                                    <button onClick= { () => deleteContact(contact.id)} > Delete </button>
+
+                                </div>
+                    ))}
+                <button className ='tc-save-button' type='button' onClick={ () => navigate('/thank-you')} > Save Contacts </button>
+            </div>
             
         </div>
     );
