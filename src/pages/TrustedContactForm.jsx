@@ -14,58 +14,48 @@ function TrustedContactForm(){
 
     const [contacts, setContacts] = useState(trustedContacts);
 
-    const [formData, setFormData] = useState ({ name: '', mobileNumber:'', relationship:'' });
-    
-    const [ editId, setEditId] = useState(null);
 
- //input changes handler
 
-    const changeHandler = (ev) =>{ setFormData({...formData, [ev.target.name]: ev.target.value});}
+    // Update individual contact details
 
-    // Add or update contacts 
+    const changeHandler = (id, ev) => { 
+        
+        const updatedContacts = contacts.map((contact) =>  
+            
+            (contact.id === id ? {...contact, [ev.target.name]: ev.target.value} : contact ));
 
-   const submitHandler = ev => { ev.preventDefault();
+        setContacts(updatedContacts);
 
-      if(editId !== null){
 
-        const updatedContacts = contacts.map((contact) => contact.id === editId ? { ...contact, ...formData} : contact);
-
-                 setContacts(updatedContacts);
-
-                 setEditId(null);
-                 }
-
-                else {
-                
-                     const newContact = { id: Date.now(), ...formData };
-
-                     setContacts([ ...contacts, newContact]);
-                    }
-
-                    setFormData ({ name:'', mobileNumber:'', relationship:'' });
-                
-    }
-      
-  
-        const editContact = (id) => {
-                
-            const selectedContact = contacts.find( contact => contact.id === id );
-
-            setFormData ({
-                name: selectedContact.name,
-                mobileNumber: selectedContact.mobileNumber,
-                relationship: selectedContact.relationship
-            });
-
-            setEditId(id);
         }
 
-        const deleteContact= (id) => {
+     const saveContact = (id) => { 
+              
+        const updatedcontacts = contacts.map((contact) => contact.id === id ? 
+              
+             {...contact, saved:true} : contact );
 
-            const updatedContacts = contacts.filter( contact => contact.id !==id );
+             setContacts(updatedcontacts);
+     } 
 
-            setContacts(updatedContacts);
+     const editContact = (id) => {
+           
+            const updateContacts = contacts.map ((contact) => contact.id === id ? 
+            
+            {...contact, saved:false} : contact);
+
+            setContacts(updateContacts);
+     }
+
+
+
+     const deleteContact = (id) => { const updatedContacts = contacts.map((contact) => contact.id === id ?
+
+            {...contact, name:'', mobileNumber:'', relationship:'', saved:false } : contact );
+
+           setContacts(updatedContacts); 
         }
+ 
        
 
     return(
@@ -74,49 +64,75 @@ function TrustedContactForm(){
 
             <h3 className='trusted-title' > Add Trusted Contacts </h3> <br />
 
-            <form className='trusted-form' onSubmit ={submitHandler} >
 
-                <div className="contact-card" >
-               
-   
-                <label> Name </label>
-                <input type='text' name='name' value = {formData.name} onChange = {changeHandler} /> <br />
-
-                <label> Mobile Number </label>
-                <input type ="tel"  name='mobileNumber' value ={formData.mobileNumber} onChange = {changeHandler}/> <br />
-
-                <label> Relationship </label>
-                <input type='text' name='relationship' value = {formData.relationship} onChange = {changeHandler} /> <br />
-
-              
-            </div>
-
-                <button className='trusted-save-button' type='submit'>
-
-                     { editId !== null? 'Update Contact': 'Add Contact'}
-
-                 </button>
-
-            </form>
 
             <div className ='contact-list' >
                      
                      {contacts.map((contact) => (
-                                <div className='contact-card' key = {contact.id}>
 
-                                    <h4> Trusted Contact </h4>
+                                <div className='contact-card'  key = {contact.id}>
+
+                                    <h4> contact {contact.id} </h4>
+
+                                    { contact.saved ?
+
+                                    (
+                                    <>
+
                                     <p> Name: {contact.name} </p>
                                     <p> Mobile: {contact.mobileNumber} </p>
                                     <p> Relationship: {contact.relationship} </p>
 
-                                    <button onClick= { () => editContact(contact.id)} > Edit </button>
+                                <div className = 'contact-actions'>
 
-                                    <button onClick= { () => deleteContact(contact.id)} > Delete </button>
+                                    <button type ='button' onClick= { () => editContact(contact.id)} > Edit </button>
+
+                                    <button type='button' onClick= { () => deleteContact(contact.id)} > Delete </button>
 
                                 </div>
+                                 </>
+                                 )
+                                :
+                                (
+                                <>
+
+                                <label>Name</label>
+
+                                <input type='text' name='name' value={contact.name} 
+                                       onChange={(ev)=>changeHandler(contact.id,ev)} />
+
+                                <label> Mobile Number </label>
+
+                                <input type='tel' name='mobileNumber' value={contact.mobileNumber} 
+                                       onChange={(ev)=>changeHandler(contact.id,ev)} />
+
+                                <label> Relationship </label>
+
+                                <input type='text' name='relationship' value={contact.relationship} 
+                                       onChange={(ev)=>changeHandler(contact.id,ev)} />
+
+                                    
+                                <button className='trusted-save-button' type ='button' 
+                                        onClick = {() => saveContact(contact.id)}> 
+
+                                        Save 
+                                        
+                                </button> 
+                              
+                                </>   
+                                    )                                
+                                }
+                                </div>
                     ))}
-                <button className ='tc-save-button' type='button' onClick={ () => navigate('/thank-you')} > Save Contacts </button>
-            </div>
+
+            </div> < br />
+
+              <button className ='tc-save-button' type='button' onClick={ () => navigate('/thank-you')} > 
+                      
+                      Save Contacts 
+
+              </button>
+
             
         </div>
     );

@@ -490,7 +490,7 @@
     max-width: 90%;
     margin: 40px auto;
     padding: 25px;
-    background-color: #f8f9fa;
+    background-color: #f2f4f5;
     border-radius: 15px; 
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -498,14 +498,11 @@
 
 .trusted-title {
     text-align: center;
-    color: #333;
+    color: #555151;
+    margin-bottom: 20px;
 }
 
-.trusted-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+
 
 .contact-card {
     display: flex;
@@ -515,7 +512,7 @@
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 
@@ -552,7 +549,8 @@
 
 }
 
-.trusted-save-button {
+.trusted-save-button,
+.tc-save-button {
 
     width: 180px;
     align-self: center;
@@ -563,17 +561,65 @@
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.5s;
 
 }
 
 
 
-.trusted-save-button:hover {
+.trusted-save-button:hover,
+.tc-save-button:hover {
    background-color: #d781e4;
    transform: scale(1.05);
 
 }
+
+.contact-list {
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-card button {
+
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;  
+}
+
+.contact-card button:first-of-type {
+
+    background-color: #a4f07f;
+    color: white;
+    margin-top: 10px;
+
+}
+
+
+.contact-card button:last-of-type {
+
+    background-color: #f1918a;
+    color: white;
+    margin-top: 10px;
+
+}
+
+.contact-card button {
+
+    display: inline-block;
+
+}
+
+.contact-actions {
+    display: flex;
+    gap: 10px;
+}
+
+
 
 
 /* Tablet */
@@ -606,17 +652,15 @@
 
     }
 
-.contact-card h4 {
-     font-size: 18px;
 
-    }
 .contact-card input {
     font-size: 14px;
     padding: 10px;
 
     }
 
-.trusted-save-button {
+.trusted-save-button,
+.tc-save-button {
     width: 100%;
 
     }
