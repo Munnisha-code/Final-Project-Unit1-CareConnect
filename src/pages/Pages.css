@@ -80,6 +80,8 @@
 
 }
 
+/* Tablet */
+
 @media(max-width:768px){
 
 .home-container {
@@ -99,6 +101,7 @@
 
 }
 
+/* Mobile */
 
 @media(max-width:480px){
 
@@ -242,7 +245,7 @@
 
 }
 
-
+/* Tablet */
 
 @media(max-width:768px){
 
@@ -259,11 +262,14 @@
 
         width: 230px;
         height: 170px;
-
+    
     }
-
+    
 
 }
+
+/* Mobile */
+
 @media (max-width: 480px) {
 
     .image-container {
@@ -274,7 +280,7 @@
 
 
     .image-container img {
-
+        
         width: 180px;
         height: 140px;
 
@@ -313,6 +319,49 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+
+/* Mobile */
+
+@media (max-width: 480px) {
+
+    .thankyou-container {
+        padding: 15px;
+        gap: 15px;
+    }
+    .thankyou-container h3 {
+        font-size: 22px;
+    }
+    .thankyou-container h4 {
+        font-size: 16px;
+        text-align: center;
+
+    }
+    .thankyou-button {
+        width: 80%;
+        padding: 10px;
+    }
+}    
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .thankyou-container {
+        padding: 20px;
+        text-align: center;
+    }
+    .thankyou-container h3 {
+        font-size: 26px;
+    }
+     .thankyou-container h4 {
+        font-size: 18px;
+    }
+    .thankyou-button {
+        padding: 12px 20px;
+    }
+}
+
 
 /*-------------------------------- Register Form ---------------------------- */
 
@@ -375,7 +424,8 @@
 }
 
 
-/* Browser resize / Mobile */
+/*  Mobile */
+
 @media (max-width: 600px) {
 
     .register-container {
@@ -398,6 +448,38 @@
     .register-button {
         font-size: 14px;
     }
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+
+    .register-container {
+        padding: 20px;
+    }
+
+
+    .register-form {
+        width: 90%;
+        max-width: 450px;
+        padding: 25px;
+    }
+
+
+    .register-title {
+        font-size: 26px;
+    }
+
+
+    .register-form input {
+        font-size: 15px;
+    }
+
+
+    .register-button {
+        font-size: 15px;
+    }
+
 }
 
 
@@ -436,7 +518,7 @@
     transition: 0.3s;
 }
 
-/* Contact box hover */
+
 
 .contact-card:hover {
 
@@ -485,7 +567,7 @@
 
 }
 
-/* Button hover */
+
 
 .trusted-save-button:hover {
    background-color: #d781e4;
@@ -640,7 +722,9 @@
     box-shadow: 0 10px 20px rgba(255,0,0,0.3);
 }
 
-@media (max-width: 600px) {
+/* Mobile */
+
+@media (max-width: 480px) {
 
     .message-container {
         width: 90%;
@@ -666,6 +750,39 @@
     .send-button {
         width: 80%;
         padding: 12px;
+    }
+
+}
+
+/* tablet*/
+
+@media (max-width: 768px) {
+
+    .message-container {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+
+    .message-buttons {
+        gap: 15px;
+    }
+
+
+    .quick-message-button {
+        width: 220px;
+        min-height: 65px;
+    }
+
+
+    .message-textarea {
+        width: 100%;
+        height: 100px;
+    }
+
+
+    .send-button {
+        padding: 12px 30px;
     }
 
 }
@@ -774,7 +891,8 @@
 
 }
 
-/* mobile and tablet*/
+
+/* Tablet */
 
 @media (max-width: 768px) {
 
@@ -822,6 +940,8 @@
     }
 
 }
+
+/*  Mobile */
 
 @media (max-width: 480px) {
 
@@ -871,3 +991,9 @@
     }
 
 }
+
+
+
+
+
+
