@@ -1,10 +1,11 @@
 
 import { useState } from 'react';
 import  LocationData from '../mockData/locationData.json';
+import './Pages.css';
 
 function LiveLocation(){
      
-    const [message, seMessage] = useState('');
+    const [message, setMessage] = useState('');
 
     function handleSendLocation() {
         setMessage('Location Sent Succesfully!😊')
@@ -13,7 +14,7 @@ function LiveLocation(){
 
     return(
 
-        <main classname = 'live-location-container'>
+        <main className = 'live-location-container'>
            
            <h2> Location </h2>
 
@@ -21,12 +22,12 @@ function LiveLocation(){
            
            {
               LocationData.map((location, index) => (
-               <artical classname ='location-card'
+               <artical className ='location-card'
                         key ={index} >
                     <h3> Location {index+1} </h3>
                     <p> Address : {location.address} </p>
                     <p> Latitude : {location.latitude} </p>
-                    <p> Longitude: {location.logitude} </p>
+                    <p> Longitude: {location.longitude} </p>
 
                     <button onClick = {handleSendLocation}> send Location </button> 
 
@@ -36,7 +37,7 @@ function LiveLocation(){
             
            </section>   
 
-           { message && (<p className = 'success-message'> {location} </p>) }
+           { message && (<p className = 'success-message'> {message} </p>) }
 
         </main>
 

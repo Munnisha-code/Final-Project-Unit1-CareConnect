@@ -669,3 +669,205 @@
     }
 
 }
+
+
+/*-------------------------------- LiveLocation Styling --------------*/
+
+.live-location-container {
+
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-color: #e8f5e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+}
+
+
+.live-location-container h2 {
+
+    color: #2563eb;
+    text-align: center;
+
+}
+
+
+.location-list {
+
+    width: 90%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+
+}
+
+
+.location-card {
+
+    background-color: white;
+    padding: 30px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    text-align: center;
+    transition: transform 0.3s;
+
+}
+
+
+.location-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.location-card h3 {
+
+    color: #2563eb;
+    margin-bottom: 20px;
+
+}
+
+
+.location-card p {
+
+    color: #333;
+    line-height: 1.6;
+
+}
+
+
+.location-card button {
+
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+
+.location-card button:hover {
+
+    background-color: #1d4ed8;
+
+}
+
+
+.success-message {
+
+    background-color: white;
+    color: green;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    font-weight: bold;
+
+}
+
+/* mobile and tablet*/
+
+@media (max-width: 768px) {
+
+    .live-location-container {
+
+        padding: 30px 15px;
+
+    }
+
+
+    .location-list {
+
+        width: 100%;
+
+    }
+
+
+    .location-card {
+
+        width: 90%;
+        padding: 25px;
+
+    }
+
+
+    .location-card h3 {
+
+        font-size: 20px;
+
+    }
+
+
+    .location-card p {
+
+        font-size: 15px;
+
+    }
+
+
+    .location-card button {
+
+        width: 100%;
+        padding: 12px;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .live-location-container {
+
+        padding: 20px 10px;
+
+    }
+
+
+    .live-location-container h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .location-card {
+
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+
+    }
+
+
+    .location-card p {
+
+        font-size: 14px;
+
+    }
+
+
+    .location-card button {
+
+        font-size: 14px;
+
+    }
+
+
+    .success-message {
+
+        width: 90%;
+        text-align: center;
+        font-size: 14px;
+
+    }
+
+}
