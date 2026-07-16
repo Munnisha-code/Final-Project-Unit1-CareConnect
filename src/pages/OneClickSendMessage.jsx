@@ -1,6 +1,9 @@
 
 import React, {useState} from 'react';
 import './Pages.css';
+import SendButton from '../components/SendButton';
+
+
 
 function OneClickSendMessage(){
     const [ message, setMessage] = useState('');
@@ -87,7 +90,7 @@ function OneClickSendMessage(){
                            }
 
            
-                            <button className = 'send-button' type='button' onClick={sendMessageHandler}> Send </button>
+                            <SendButton onClick={sendMessageHandler}> Send </SendButton>
 
                    </div>
                 )

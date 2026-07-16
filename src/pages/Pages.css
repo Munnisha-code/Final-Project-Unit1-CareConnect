@@ -695,16 +695,7 @@
     margin-top: 20px;
 }
 
-.send-button {
-    background-color: rgb(188, 160, 160);
-    margin-top: 20px;
-    padding: 12px 40px;
-}
-.send-button:hover {
-    background-color: #aff3b5;
-    transform: scale(1.05);
-    transition: 1s;
-}
+
 
 .quick-message-button {
     width: 250px;
@@ -902,26 +893,7 @@
 }
 
 
-.location-card button {
 
-    margin-top: 20px;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    background-color: #2563eb;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: 0.3s;
-
-}
-
-
-.location-card button:hover {
-
-    background-color: #1d4ed8;
-
-}
 
 
 .success-message {
