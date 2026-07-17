@@ -9,7 +9,7 @@ function LiveLocation(){
     const [message, setMessage] = useState('');
 
     function handleSendLocation() {
-        setMessage('Location Sent Succesfully!😊')
+        setMessage('Location Sent Successfully!😊')
     }
  
 
