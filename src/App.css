@@ -36,6 +36,24 @@ header {
     align-items: center;
     padding: 15px 40px;
     background-color: #4bce56;
+    box-shadow: 0 4px 10px rgba(0,0,0,0,0.1);
+}
+
+.brand-section{
+  
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.logo{
+ 
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
 }
 
 header h1 {

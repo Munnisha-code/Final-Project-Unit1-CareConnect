@@ -1,6 +1,8 @@
 
 import Navbar from "./Navbar";
 
+import logo from "../assets/images/CareConnect Logo.png"; 
+
 
 
 function Header(){
@@ -15,10 +17,15 @@ function Header(){
     return(
 
         <header>
-             
+
+            <div className= 'brand-section'>
+               
+               <img src={logo} alt= 'CareConnect logo' className='logo' />
             
-            <h1> Care Connect</h1>
+               <h1> Care Connect</h1>
             
+            </div>
+
             <Navbar links={navLinks}/>
            
         </header>
