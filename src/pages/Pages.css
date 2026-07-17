@@ -3,7 +3,7 @@
 
 .home-container {
 
-    background-image: url("../images/careconnecthome.jpg");  
+    background-image: url("/image/careconnecthome.jpg");  
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -862,7 +862,7 @@
     padding: 40px 20px;
 
    
-    background-image: url('/images/gps.jpg');
+    background-image: url("/image/gps.jpg");
     background-size: cover;
 
     display: flex;
