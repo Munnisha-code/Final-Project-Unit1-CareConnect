@@ -49,7 +49,7 @@ function OneClickSendMessage(){
                 messageSent ? (
                     <div className = 'success-section'> 
 
-                         <h4> 🤩 Message sent suceffuly!  </h4>
+                         <h4> 🤩 Message sent Successfully!  </h4>
                          <p> Your message:</p>
                          <p> {message} </p>
                          <p> Your trusted contacts have been notified.</p>
