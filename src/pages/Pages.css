@@ -139,12 +139,11 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    background-color: h
-    #e8f5e9;
+    background-color: #e8f5e9;
 
 }
+
 .about-intro,
-.about-card,
 .why-careconnect {
 
     background-color: white;
@@ -159,24 +158,16 @@
 }
 
 .about-intro:hover,
-.about-card:hover,
-.why-careconnect {
+.about-info-section:hover,
+.why-careconnect:hover,
+.vision-section:hover {
 
     transform: translateY(-5px);
 
 }
 
-.mission-vision-container {
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-
-}
-.about-card h2,
+.about-info-content h2,
 .about-intro h2,
 .why-careconnect h2 {
 
@@ -187,12 +178,52 @@
 
 
 .about-intro p ,
-.why-careconnect p {
+.why-careconnect p,
+.about-info-content p {
 
     line-height: 1.6;
     color: #333;
 
 }
+
+.about-info-section,
+.vision-section {
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    transition: transform 1s;
+
+}
+
+.about-section-image {
+
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+}
+
+.about-info-content {
+
+    flex: 1;
+
+}
+
+.highlight-text {
+    color: #20c03d;
+    font-weight: 600;
+}
+
 
 .why-careconnect h3 {
 
@@ -833,7 +864,7 @@
    
     background-image: url('/images/gps.jpg');
     background-size: cover;
-    
+
     display: flex;
     flex-direction: column;
     align-items: center;
