@@ -3,7 +3,7 @@
 
 .home-container {
 
-    background-image: url("../assets/careconnect.jpg");  
+    background-image: url("../images/careconnecthome.jpg");  
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -829,7 +829,11 @@
 
     min-height: 100vh;
     padding: 40px 20px;
-    background-color: #e8f5e9;
+
+   
+    background-image: url('/images/gps.jpg');
+    background-size: cover;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -891,10 +895,6 @@
     line-height: 1.6;
 
 }
-
-
-
-
 
 .success-message {
 
