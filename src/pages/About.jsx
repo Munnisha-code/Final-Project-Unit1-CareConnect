@@ -1,16 +1,16 @@
 
 import careConnectTogether from '../assets/images/careconnecttogether.jpg';
+
 import family from '../assets/images/family.jpg';
-import lovedOnes from '../assets/images/lovedones.jpg';
-import fatherLove from '../assets/images/fatherLove.jpg';
+
 import staySafe from '../assets/images/staySafe.jpg';
-import together from '../assets/images/together.jpg';
+
 import emergency from '../assets/images/emergency.jpg';
 
 
 function About(){
      
-   const images = [careConnectTogether, family, lovedOnes, fatherLove, staySafe, together, emergency];
+
 
     return(
 
@@ -99,7 +99,7 @@ function About(){
 
                 <div className="about-info-content">
 
-                    <h2>How CareConnect Helps</h2>
+                    <h2>How CareConnect Supports Users </h2>
 
                     <p>
                         Users can share their location, send quick safety
@@ -119,7 +119,7 @@ function About(){
             <section className="vision-section">
 
                 <img
-                    src={together}
+                    src={staySafe}
                     alt="Community connected through technology and safety support"
                     className="about-section-image"
                 />
