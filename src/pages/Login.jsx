@@ -21,10 +21,10 @@ function Login(){
    // onchange eventhandler for enter/change the login credentials
 
    const changeHandler = ev =>{
-         setData({...data, [ev.target.name]: ev.target.value})
+         setData({...data, [ev.target.name]: ev.target.value});
    }
    
-   // submit handler
+   // login submit handler
 
    const submitHandler = ev => {
          ev.preventDefault();
@@ -36,22 +36,23 @@ function Login(){
         );
 
       if (user) {
+          
+          setError('');
+
         navigate('/one-click-send-message');
       } 
+
       else {
         setError('invalid username or password');
       }  
 
     }
 
-    const loginHandler = () => {
-        
-        navigate('/one-click-send-message');
-    }     
+    
    
     return(
-        <div className="Login-container">
-            <center>
+        <div className="login-container">
+            
                 <form onSubmit ={submitHandler} className="login-form" >
                     
                     <h3> Login to CC</h3>
@@ -70,7 +71,7 @@ function Login(){
                 <p> If you are not a member? {''}
                     <Link to='/RegisterForm '> Please register Here </Link>
                 </p> <br />
-            </center>
+            
         </div>
 
     );
