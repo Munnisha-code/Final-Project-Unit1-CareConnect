@@ -53,7 +53,7 @@ function RegisterForm(){
                 <input type ='password' name = 'password' value = {password} onChange ={changeHandler} /> <br />
 
                 <label> Confirm Password: </label>
-                <input type ='confirmPassword' name = 'Password' value = {confirmPassword} onChange ={changeHandler} /> <br /> <br />
+                <input type ='confirmPassword' name = 'confirmPassword' value = {confirmPassword} onChange ={changeHandler} /> <br /> <br />
 
                 <button className='register-button' type = 'submit'> Register </button> <br /> <br />
 
