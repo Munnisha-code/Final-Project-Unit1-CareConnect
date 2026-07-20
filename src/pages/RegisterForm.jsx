@@ -25,8 +25,7 @@ function RegisterForm(){
     
     const submitHandler = ev => {
          ev.preventDefault();
-
-         console.log(data)
+         
           navigate('/trusted-contacts');
     }
 

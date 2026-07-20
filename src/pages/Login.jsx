@@ -69,7 +69,7 @@ function Login(){
                 </form> <br />
 
                 <p> If you are not a member? {''}
-                    <Link to='/RegisterForm '> Please register Here </Link>
+                    <Link to='/RegisterForm'> Please register Here </Link>
                 </p> <br />
             
         </div>
