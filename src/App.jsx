@@ -21,7 +21,7 @@ function App() {
 
   return (
       <>
-       < BrowserRouter>
+       < BrowserRouter basename="/Final-Project-Unit1-CareConnect">
 
           <Header/>
 
